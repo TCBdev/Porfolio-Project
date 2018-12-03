@@ -4,6 +4,7 @@ body {
 }
 
 hr {
+    size: 10px;
     color: #EA3C8E;
 }
 
@@ -26,9 +27,11 @@ hr {
 }
 
 .text {
+    position: absolute;
+    top: 9%;
+    left: 41%;
     text-align: left;
     font-size: 1.8rem;
-    padding-left: 41%;
 }
 
 .button1 {
@@ -36,6 +39,7 @@ hr {
     padding: 0.7rem 1rem;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
+    font-weight: 800;
     text-align: center;
     text-decoration: none;
 	display: inline-block;
@@ -47,7 +51,7 @@ hr {
 	transition: background-color 1.2s, color 0.3s linear;
     overflow: hidden;
     position: absolute;
-    top: 29%;
+    top: 26%;
     left: 47%;
     transform: translateX(-40%) translateY(-60%);
     animation: fadeButton1 5s ease-in;
@@ -121,8 +125,6 @@ hr {
     left: 0;
     font-size: 1.2rem;
     font-family: 'Lato', sans-serif;
-    border-bottom-color: #EA3C8E;
-    border-bottom-width: 5px;
     z-index: 9999;
     padding-left: 15px;    
 }
@@ -169,17 +171,20 @@ hr {
 }
 
 .page-link {
-    padding: 0px;
+    padding: 0;
     background-color: #183446;
     margin-right: 30px;
+    border: none;
 }
 
 .page-link a {
+    color: #FFFFFF;
     text-decoration: none;
 }
 
 .page-link a:hover {
     color: #EA3C8E;
+    background-color: #183446;
 }
 
 .abt-txt {
@@ -187,7 +192,7 @@ hr {
 }
 
 .imgwrap {
-    padding-left: 15%;
+    padding-left: 20%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1em;

@@ -14,14 +14,17 @@ hr {
 }
 
 #about {
+    padding: 60px 0;
     background-color: #FCFCFC;
 }
 
 #portfolio {
+    padding: 60px 0;
     background-color: #E8F6FF;
 }
 
 #contact {
+    padding: 60px 0;
     background-color: #0b1922;
 }
 

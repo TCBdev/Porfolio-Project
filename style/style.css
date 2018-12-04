@@ -9,9 +9,8 @@ hr {
 }
 
 #home {
-    background-color: #183446;
+    background-color: #0b1922;
     color: #FFFFFF;
-    padding: 100px 5px;
 }
 
 #about {
@@ -23,11 +22,16 @@ hr {
 }
 
 #contact {
-    background-color: #FCFCFC;
+    background-color: #0b1922;
+}
+
+.jumbotron {
+    
 }
 
 .text {
-    position: absolute;
+    position: absolute !important;
+    margin-bottom: 0;
     top: 9%;
     left: 41%;
     text-align: left;
@@ -35,7 +39,7 @@ hr {
 }
 
 .button1 {
-    background-color: #183446;
+    background-color: #0b1922;
     padding: 0.7rem 1rem;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
@@ -78,7 +82,7 @@ hr {
 }
 
 .buttonSubmit {
-    background-color: #00A6DC;
+    background-color: #0b1922;
     padding: 0.7rem 1rem;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
@@ -88,7 +92,7 @@ hr {
 	display: inline-block;
 	margin: 4% 0 0 50%;
 	width: 15%;
-	border: 2px solid #00A6DC;
+	border: 2px solid #EA3C8E;
 	color: #ffffff;
 	cursor: pointer;
 	transition: background-color 1.2s, color 0.3s linear;
@@ -116,10 +120,14 @@ hr {
 	box-shadow: inset 0 0 0 160px #ffffff;
 }
 
-#navigation {
+.navbar {
+    display: inline-block;
     margin: 0;
     width: 100%;
-    background-color: #183446;
+    background-color: #0b1922 !important;
+	border-color:transparent;
+	background-image:none;
+	box-shadow:none;
     position: fixed;
     top: 0;
     left: 0;
@@ -129,15 +137,15 @@ hr {
     padding-left: 15px;    
 }
 
-.navbar {
-    background-color: #183446;
+.portimg {
+    width: 70%;
 }
 
-.flex {
+/*.flex {
     position: relative;
     font-size: 1.8rem;
     text-align: left;
-}
+}*/
 
 .container {
     display: flex;
@@ -152,16 +160,15 @@ hr {
 }
 
 .link-wrap {
-    background-color: #183446;
+    background-color: #0b1922;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .txt-type {
-    padding: 0 0 0 43%;
     text-align: center;
-    font-size: 4rem;
+    font-size: 1.8rem;
     font-weight: 950;
     font-family: 'Lato', sans-serif;
 }
@@ -170,22 +177,25 @@ hr {
     border-right: 0.2rem solid #777;
 }
 
-.page-link {
+.nav-link {
+    color: #FFFFFF;
     padding: 0;
-    background-color: #183446;
+    background-color:transparent;
     margin-right: 30px;
     border: none;
 }
 
-.page-link a {
-    color: #FFFFFF;
+.nav-link:hover {
+    color: #EA3C8E;
+    background-color: transparent;
+}
+
+
+.nav-link a {
+    color: #FFFFFF !important;
     text-decoration: none;
 }
 
-.page-link a:hover {
-    color: #EA3C8E;
-    background-color: #183446;
-}
 
 .abt-txt {
     padding: 0 15%;
@@ -203,20 +213,20 @@ hr {
 }
 
 .cntc-txt a {
-    color: #00A6DC;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
 .cntc-txt a:hover {
-    color: #EA3C8E;
+    color: #00A6DC;
 }
 
 .cntc-txt a:visited {
-    color: #183446;
+    color: #EA3C8E;
 }
 
 .cntc-txt a:visited:hover  {
-    color: #EA3C8E;
+    color: #00A6DC;
 }
 
 .slideinleft {

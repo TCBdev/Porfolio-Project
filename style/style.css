@@ -18,6 +18,11 @@ hr {
     background-color: #FCFCFC;
 }
 
+#about img {
+    width: 15%;
+    height: 15%;
+}
+
 #portfolio {
     padding: 60px 0;
     background-color: #E8F6FF;
@@ -28,10 +33,6 @@ hr {
     background-color: #0b1922;
 }
 
-.jumbotron {
-    
-}
-
 .text {
     position: absolute !important;
     margin-bottom: 0;
@@ -39,6 +40,11 @@ hr {
     left: 41%;
     text-align: left;
     font-size: 1.8rem;
+}
+
+.imgcircle {
+    margin: 10px;
+    border-radius: 20%;
 }
 
 .button1 {
@@ -201,7 +207,7 @@ hr {
 
 
 .abt-txt {
-    padding: 0 15%;
+    padding: 10px;
 }
 
 .imgwrap {
@@ -230,6 +236,25 @@ hr {
 
 .cntc-txt a:visited:hover  {
     color: #00A6DC;
+}
+
+.abtformat {
+    display: flex;
+    font-size: 1.4rem;   
+    font-weight: 200;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.port-txt {
+    margin: 15px 0;
+    text-align: center;
+}
+
+
+.cntc-txt img:hover {
+    transform: scale(1.25);
+    transition: transform .35s ease-in-out;
 }
 
 .slideinleft {

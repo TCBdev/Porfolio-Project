@@ -1,4 +1,22 @@
 /*
+  -----------------
+    N A V   B A R
+  -----------------
+*/
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 10) {
+      $('#nav').addClass('shrink');
+    }
+    else {
+      $('#nav').removeClass('shrink');
+    }
+  });
+});
+
+
+/*
   -------------------------
     S N O W   F L A K E S
   -------------------------

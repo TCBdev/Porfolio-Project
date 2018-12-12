@@ -125,7 +125,7 @@ hr {
 	display: inline-block;
 	margin: 4% 0 0 50%;
 	width: 15%;
-	border: 2px solid #00A6DC;
+	border: 2px solid #FFFFFF;
 	color: #FFFFFF;
 	cursor: pointer;
 	transition: background-color 1.2s, color 0.3s linear;
@@ -140,8 +140,8 @@ hr {
 }
 
 .buttonSubmit:hover {
-    background-color: #00A6DC;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
 .buttonSubmit a:visited {

@@ -6,7 +6,7 @@ body {
 hr {
     border: none;
     height: 4px;
-    color: #EA3C8E;
+    color: #EACDCF;
 }
 
 #home {
@@ -21,9 +21,9 @@ hr {
 
 #about {
     position: absolute;
-    top: 33%;
-    left: 5%;
-    margin-right: 37%;
+    top: 210px;
+    left: 3%;
+    margin-right: 40%;
 }
 
 #about img {
@@ -34,6 +34,7 @@ hr {
 #portfolio {
     padding: 60px 0;
     background-color: #E8F6FF;
+    overflow: hidden;
 }
 
 #contact {
@@ -44,11 +45,11 @@ hr {
 .text {
     position: absolute !important;
     margin-bottom: 0;
-    left: 10%;
+    left: 7%;
     text-align: left;
     font-size: 3rem;
     animation: heading;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-delay: 3s;
     -moz-animation-delay: 3s;
@@ -89,10 +90,10 @@ hr {
 	transition: background-color 1.2s, color 0.3s linear;
     overflow: hidden;
     position: absolute;
-    top: 26%;
-    left: 47%;
+    top: 550px;
+    left: 13%;
     transform: translateX(-40%) translateY(-60%);
-    animation: fadeButton 3s ease-in;
+    animation: fadeButton 2s ease-in;
     animation-delay: 0s, 8s;
     -moz-animation-delay: 0s, 8s;
     -webkit-animation-delay: 0s, 8s;
@@ -232,18 +233,30 @@ hr {
     text-decoration: none;
 }
 
+.hide {
+    position: relative;
+    left: -2000px;
+}
+
 .abt-txt {
-    padding-left: 10%;
-    left: -1000px;
+    margin-left: 7%;
+    left: -2000px;
     color: #FFFFFF;
+    /* text-shadow: 5px 1px #5252522f; */
     position: relative;
     animation-name: content;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-delay: 3s;
     -moz-animation-delay: 3s;
     -webkit-animation-delay: 3s;
     -o-animation-delay: 3s;
+}
+
+.abtformat {
+    display: flex;
+    font-size: 130%;
+    font-weight: 200;
 }
 
 .imgwrap {
@@ -294,12 +307,6 @@ hr {
     transition: transform .35s ease-in-out;
 }
 
-.abtformat {
-    display: flex;
-    font-size: 1.4rem;   
-    font-weight: 200;
-}
-
 .port-txt {
     margin: 8% 0;
     text-align: center;
@@ -323,46 +330,41 @@ hr {
 
 @keyframes heading {
     0% {top: -50px;}
-    100% {top: 200px;}
+    100% {top: 75px;}
 }
 
 @-moz-keyframes heading {
     0% {top: -50px;}
-    100% {top: 9%;}
+    100% {top: 75px;}
 }
 
 @-webkit-keyframes heading {
     0% {top: -50px;}
-    100% {top: 9%;}
+    100% {top: 75px;}
 }
 
 @-o-keyframes heading {
     0% {top: -50px;}
-    100% {top: 9%;}
-}
-
-@keyframes heading {
-    0% {top: -50px;}
-    100% {top: 9%;}
+    100% {top: 75px;}
 }
 
 @keyframes content {
-  0%   {left: -1000px;}
+  0%   {left: -2000px;}
   100% {left: 0;}
 }
 
 @-moz-keyframes content {
-  0%   {left: -1000px;}
+  0%   {left: -2000px;}
   100% {left: 0;}
 }
 
 @-webkit-keyframes content {
-  0%   {left: -1000px;}
+  0%   {left: -2000px;}
   100% {left: 0;}
 }
 
 @-o-keyframes content {
-  0%   {left: -1000px;}
+  0%   {left: -2000px;}
   100% {left: 0;}
 }
 
@@ -408,46 +410,18 @@ hr {
 
 /****************************  MEDIA QUERIES  ***************************/
 
-@media (max-width: 1350px) {
-    #home {
-        background-color: #EACDCF;
-        color: #FFFFFF;
+@media (max-width: 1200px) {
+    .abtformat {
+        font-size: 110%;
     }
-    
+}
+
+@media (min-width: 725px) and (max-width: 1030px) {
     #about {
         width: 100%;
         position: unset;
         padding: 5%;
         background-color: #9AADBF;
-    }
-
-    .text {
-        position: absolute !important;
-        margin-bottom: 0;
-        top: 15%;
-        left: 10%;
-        text-align: left;
-        font-size: 5rem;
-    }
-
-    .txt-type {
-        text-align: center;
-        font-size: 3.5rem;
-        font-weight: 900;
-        font-family: 'Lato', sans-serif;
-    }
-
-    .button1 {
-        left: 16%;
-        top: 47%;
-        background: transparent;
-    }
-}
-
-@media (min-width: 491px) and (max-width: 860px) {
-    #portfolio {
-        padding: 0;
-        margin: auto;
     }
 
     .abt-txt {
@@ -460,30 +434,180 @@ hr {
         animation: none !important;
     }
 
+    .hide {
+        left: 0;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
     .text {
         position: absolute !important;
         margin-bottom: 0;
         top: 15%;
         left: 10%;
         text-align: left;
-        font-size: 2rem;
+        font-size: 450%;
+        overflow: hidden;
     }
 
     .txt-type {
         text-align: center;
-        font-size: 2rem;
+        font-size: 100%;
+        font-weight: 900;
+        font-family: 'Lato', sans-serif;
+        overflow: hidden;
+    }
+
+    .button1 {
+        left: 19%;
+        top: 60%;
+        width: 200px;
+    }
+}
+
+@media (min-width: 491px) and (max-width: 724px) {
+    #portfolio {
+        padding: 5%;
+        margin: auto;
+    }
+
+    #about {
+        width: 100%;
+        position: unset;
+        padding: 5%;
+        background-color: #9AADBF;
+    }
+
+    .abt-txt {
+        padding: 5%;
+        left: 0;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+
+    .hide {
+        left: 0;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text {
+        position: absolute !important;
+        margin-bottom: 0;
+        top: 15%;
+        left: 10%;
+        text-align: left;
+        font-size: 160%;
+    }
+
+    .txt-type {
+        text-align: center;
+        font-size: 160%;
         font-weight: 900;
         font-family: 'Lato', sans-serif;
     }
 
     .button1 {
-        left: 20%;
-        top: 35%;
-        background: transparent;
+        left: 23.5%;
+        top: 36%;
+        width: 200px;
     }
 
     .buttonSubmit {
         margin-top: 10%;
         width: 200px;
+    }
+}
+
+@media (min-width: 1px) and (max-width: 490px) {
+
+    #home {
+        padding: 900px auto;
+        background-color: #EACDCF;
+        overflow: hidden;
+    }
+
+    #about {
+        padding: 60px 0;
+        width: 100%;
+        position: unset;
+        padding: 5%;
+        background-color: #9AADBF;
+        overflow: hidden;
+    }
+
+    #portfolio {
+        padding: 60px 0;
+        overflow: hidden;
+    }
+
+    #contact {
+        padding: 60px 0;
+        overflow: hidden;
+    }
+
+    .text {
+        position: relative;
+        top: 45px;
+        font-size: 155%;
+    }
+
+    .txt-type {
+        position: relative;
+        font-size: 148%;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .abt-txt {
+        padding: 5%;
+        left: 0;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+
+    .hide {
+        left: 0;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .herofader {
+        z-index: -1;
+    }
+
+    .button1 {
+        top: 180px;
+        left: 45%;
+    }
+
+    .buttonSubmit {
+        margin-top: 18%;
+        width: 200px;
+    }
+
+    @keyframes heading {
+        0% {top: -50px;}
+        100% {top: 45px;}
+    }
+
+    @-moz-keyframes heading {
+        0% {top: -50px;}
+        100% {top: 45px;}
+    }
+
+    @-webkit-keyframes heading {
+        0% {top: -50px;}
+        100% {top: 45px;}
+    }
+
+    @-o-keyframes heading {
+        0% {top: -50px;}
+        100% {top: 45px;}
     }
 }

@@ -97,9 +97,14 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h3 class="port-txt slideinbottom">Restaurant Review App</h3>
+                    <div class="slideinleft">
+                        <a href="https://tcdev.github.io/restaurantreview/" target="_blank"><img class="portimg" src="images/RRApp.JPG" alt="Restaurant Review App"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <h3 class="port-txt slideinbottom">Projects Coming Soon!</h3>
                     <div class="slideinright upcoming">
-                        <p>Restaurant Review App</p>
                         <p>Roll the Dice Game</p>
                         <p>Budgeting App</p>
                         <p>Forkify - A Food Ordering App</p>
@@ -111,66 +116,46 @@
     <section id="contact">
         <div class = "slideinleft" style="color: #FFFFFF"><h2>CONTACT</h2></div>
         <br><br>
-        <div id="contactweb">
-            <ul>
-                <a href="https://github.com/TCdev" target="_blank">
-                    <li>
-                        <div>
-                            <img class="imgcntc" alt="T C Dev Github" src="images\github.png">
-                            <div>
-                            </div>
-                        </div>
-                    </li>
-                    <p class="center">Github</p>
-                </a>
-                <a href="https://www.linkedin.com/in/tcdev/" target="_blank">
-                    <li>
-                        <div>
-                            <img class="imgcntc" alt="T C Dev LinkedIn" src="images\linkedin.png">
-                            <div>
-                            </div>
-                        </div>
-                    </li>
-                    <p class="center">LinkedIn</p>
-                </a>
-                <a href="https://codepen.io/tcdev/" target="_blank">
-                    <li>
-                        <div>
-                            <img class="imgcntc" alt="Codepen.io" src="images\codepen.png">
-                            <div>
-                            </div>
-                        </div>
-                    </li>
-                    <p class="center">Codepen.io</p>
-                </a>
-            </ul>
-        </div>
-
         <div class="container">
             <p class="highlight" style="text-align: center; font-size: 1.3rem;">
                 Want to work together? Contact Me!
             </p>
-            <form>
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input id="firstName" class="form-control" type="text" placeholder="First Name">
+            <form id="myform" class="wrapper" onsubmit="submitForm(); return false;">
+                <div class="contactme">
+                    <div class="form-group">
+                        <label for="firstName" class="label">First Name</label>
+                        <input id="firstName" class="form-control" type="text" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="label">Last Name</label>
+                        <input id="lastName" class="form-control" type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="label">Email</label>
+                        <input id="Email" class="form-control" type="email" placeholder="Enter Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="label">Message</label>
+                        <textarea id="Message" class="form-control" placeholder="Add Message..." required></textarea>
+                    </div>
+                    <button type="submit" id="contactSubmit" class="buttonSubmit btn-default">SUBMIT</button>
                 </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input id="lastName" class="form-control" type="text" placeholder="Last Name">
-                </div>
-                <div class="form-group">
-                    <label for="Email">Email</label>
-                    <input id="Email" class="form-control" type="email" placeholder="Enter Email">
-                </div>
-                <div class="form-group">
-                    <label for="Message">Message</label>
-                    <textarea id="Message" class="form-control" placeholder="Add Message..."></textarea>
-                </div>
-                <button type="submit" class="buttonSubmit btn-default">SUBMIT</button>
             </form>
         </div>
         <!--ADD CONTACT MODAL WITH NAME EMAIL/PHONE AND INQUIRY-->
+        <div id="cntcinfo">
+            <ul class="contactweb">
+                <li>
+                    <a href="https://github.com/TCdev" target="_blank"><img class="imgcntc" alt="T C Dev Github" src="images\github.png"></a>
+                </li>
+                <li>
+                   <a href="https://www.linkedin.com/in/tcdev/" target="_blank"><img class="imgcntc" alt="T C Dev LinkedIn" src="images\linkedin.png"></a>
+                </li>
+                <li>
+                    <a href="https://codepen.io/tcdev/" target="_blank"><img class="imgcntc" alt="Codepen.io" src="images\codepen.png"></a>
+                </li>
+            </ul>
+        </div>
     </section>
     <script>
         window.sr = ScrollReveal();

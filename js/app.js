@@ -36,6 +36,37 @@ $(document).ready(function () {
 
 /*
   -------------------------
+    S U B M I T   F O R M
+  -------------------------
+*/
+
+function _(id) {return document.getElementById(id);}
+function submitForm() {
+  _("contactSubmit").disabled = true;
+  _("status").innerHTML = 'please wait...';
+  var formInfo = new FormData();
+  formInfo.append("firstName", _("fn").value);
+  formInfo.append("lastName", _("ln").value);
+  formInfo.append("Email", _("email").value);
+  formInfo.append("Message", _("message").value);
+  var ajax = new XMLHttpRequest();
+  ajax.open("POST", "example_parser.php");
+  ajax.onreadystatechange = function() {
+    if(ajax.readyState == 4 && ajax.status == 200) {
+      if(ajax.responseText == "success") {
+        _("myform").innerHTML = '<h2>Thanks ' +_("fn").value + '. Your message has been sent.</h2>';
+      } else {
+        _("status").innerHTML = ajax.responseText;
+        _("contactSubmit").disabled = false;
+      }
+    }
+  }
+  ajax.send(formInfo);
+}
+
+
+/*
+  -------------------------
     S N O W   F L A K E S
   -------------------------
 */

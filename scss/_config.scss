@@ -1,5 +1,6 @@
 $primary-color: #444444;
 $secondary-color: #56AFE2;
+$tertiary-color: #EB9D0E;
 $show-hero-image: true;
 $hero-image: url(../img/bg.jpg);
 $background-opacity: 0.9;
@@ -12,8 +13,9 @@ $background-opacity: 0.9;
     @if $show-hero-image {
         &#bg-img {
             background: $hero-image;
-            background-attachment: fixed;
             background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
 
             &:after {
                 content: '';
@@ -24,7 +26,50 @@ $background-opacity: 0.9;
                 height: 100%;
                 z-index: -1;
                 background-color: rgba($primary-color, $background-opacity);
+                height: 117vh;
             }
         }
     }
+}
+
+// SET TEXT COLOR
+
+@function setTextColor($color) {
+    @if (lightness($color) > 40) {
+        @return #242121;
+    }
+
+    @else {
+        @return #FFFFFF;
+    }
+}
+
+// MEDIA QUERY MIXINS
+
+@mixin mediaSmall {
+    @media screen and (max-width: 540px) {
+        @content;
+    }
+}
+
+@mixin mediaMedium {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLarge {
+    @media screen and (min-width: 769px) and (max-width: 1169px) {
+        @content;
+    }
+}
+
+@mixin mediaXLarge {
+    @media screen and (min-width: 1170px) {
+        @content;
+    }
+}
+
+section main {
+    height: 100vh;
 }

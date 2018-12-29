@@ -9,8 +9,19 @@
 // DESKTOPS & LAPTOPS
 
 @include mediaLarge {
+
+    main {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
     .projects {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    #contact {
+        padding: 4rem 10rem;
     }
 }
 
@@ -20,12 +31,6 @@
     main {
         align-items: center;
         text-align: center;
-
-        .lg-heading {
-            line-height: 1;
-            margin-bottom: 1rem;
-            font-size: 3rem;
-        }
     }
 
     ul.menu-nav,
@@ -51,26 +56,42 @@
 
         .portrait {
             background: url('../img/TCDev.gif') no-repeat;
-            background-size: 187%;
+            background-size: 100%;
             background-position: center center;
             width: 150px;
             height: 150px;
         }
     }
 
-    .about-info {
-        grid-template-areas:
-            'aboutimg'
-            'bio'
-            'job1'
-            'job2'
-            'job3';
+    #about {
+        .about-info {
+            grid-template-areas:
+                'aboutimg'
+                'bio'
+                'job1'
+                'job2'
+                'job3';
 
-        grid-template-columns: 1fr;
+            grid-template-columns: 1fr;
+        }
+
+        .projects {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
+    #contact {
+        padding: 4rem;
+    }
+
+    #sent {
+        .lg-heading {
+            font-size: 4rem;
+        }
+
+        .sm-heading {
+            font-size: 1.7rem;
+        }
     }
 }
 
@@ -102,5 +123,15 @@
 
     .projects {
         grid-template-columns: 1fr;
+    }
+
+    #sent {
+        .lg-heading {
+            font-size: 2.7rem;
+        }
+
+        .sm-heading {
+            font-size: 1.7rem;
+        }
     }
 }

@@ -9,6 +9,18 @@
   "author": "TC Brown",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "@sendgrid/mail": "^6.3.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "jump.js": "^1.0.2",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "node-sass": "^4.11.0",
+    "nodemailer": "^4.7.0",
+    "save": "^2.3.3"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0"
   }
 }

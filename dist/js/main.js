@@ -16,41 +16,40 @@ class TypeWriter {
     };
 
     type() {
-        // Current index of word
+        // CURRENT WORD INDEX
         const current = this.wordIndex % this.words.length;
-        // Get full text of current word
+        // GET TEXT
         const fullTxt = this.words[current];
 
-        // Check if deleting
+        // CHECK IF DELETING
         if (this.isDeleting) {
-            // Remove char
+            // REMOVE CHARACTERS
             this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
-            // Add char
+            // ADD CHARACTERS
             this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
-        // Insert txt into element
+        // ADD TEXT TO ELEMEMT
         this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-        // Initial Type Speed
+        // TYPING SPEED
         let typeSpeed = 300;
 
         if (this.isDeleting) {
             typeSpeed /= 2;
         }
 
-        // If word is complete
+        // WORD COMPLETE
         if (!this.isDeleting && this.txt === fullTxt) {
-            // Make pause at end
+            // PAUSE TYPING
             typeSpeed = this.wait;
-            // Set delete to true
             this.isDeleting = true;
         } else if (this.isDeleting && this.txt === '') {
             this.isDeleting = false;
-            // Move to next word
+            // NEXT WORD
             this.wordIndex++;
-            // Pause before start typing
+            // PAUSE TYPING
             typeSpeed = 350;
         }
 
@@ -59,15 +58,15 @@ class TypeWriter {
 };
 
 
-// Init On DOM Load
+// LOAD TO DOM
 document.addEventListener('DOMContentLoaded', init);
 
-// Init App
+// START
 function init() {
     const txtElement = document.querySelector('.txt-type');
     const words = JSON.parse(txtElement.getAttribute('data-words'));
     const wait = txtElement.getAttribute('data-wait');
-    // Init TypeWriter
+    // CALL FUNCTION
     new TypeWriter(txtElement, words, wait);
 };
 
@@ -91,16 +90,19 @@ const navItems = document.querySelectorAll('.nav-item');
 
 let showMenu = false;
 
-menuBtn.addEventListener('click', toggleMenu)
+menuBtn.addEventListener('click', toggleMenu);
+menu.addEventListener('click', toggleMenu);
+menuNav.addEventListener('click', toggleMenu);
+menuBranding.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
-    if(!showMenu) {
+    if (!showMenu) {
         menuBtn.classList.add('close');
         menu.classList.add('show');
         menuNav.classList.add('show');
-        menuBranding.classList.add('show');  
+        menuBranding.classList.add('show');
         navItems.forEach(item => item.classList.add('show'));
-        
+
         // UPDATE MENU STATE
         showMenu = true;
     } else {
@@ -114,3 +116,39 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+
+
+/*
+  -----------------------------
+    S M O O T H   S C R O L L 
+  -----------------------------
+*/
+
+
+$(document).ready(function () {
+
+    var scrollLink = $('.scroll');
+
+    // SMOOTH SCROLL
+    scrollLink.click(function (e) {
+        e.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 500);
+    });
+
+    // UPDATE CURRENT LINK
+    $(window).scroll(function () {
+        var scrollbarLocation = $(this).scrollTop();
+
+        scrollLink.each(function () {
+
+            var sectionOffset = $(this.hash).offset().top - 20;
+
+            if (sectionOffset <= scrollbarLocation) {
+                $(this).parent().addClass('current');
+                $(this).parent().siblings().removeClass('current');
+            }
+        })
+    })
+})

@@ -63,7 +63,7 @@ section main {
       height: 250px;
       background: url("../img/TCDev.gif") no-repeat;
       background-color: #00000075;
-      background-size: 187%;
+      background-size: 100%;
       background-position: center center;
       border-radius: 50%;
       border: double 3px #FFFFFF; }
@@ -126,6 +126,9 @@ body {
       background-color: rgba(68, 68, 68, 0.9);
       height: 117vh; }
 
+html {
+  scroll-behavior: smooth; }
+
 h1,
 h2,
 h3 {
@@ -154,10 +157,14 @@ header {
 
 .txt-type {
   color: #EB9D0E;
-  font-weight: 900; }
+  font-weight: bolder; }
 
 .text-secondary {
   color: #56AFE2;
+  font-weight: 900; }
+
+.text-third {
+  color: #EB9D0E;
   font-weight: 900; }
 
 main {
@@ -178,7 +185,6 @@ main {
 
 #about {
   background: #444444;
-  padding: 0;
   padding: 4rem;
   overflow: hidden; }
   #about .lg-heading {
@@ -218,7 +224,6 @@ main {
 
 #portfolio {
   background: #A8A8A8;
-  padding: 0;
   padding: 4rem;
   overflow: hidden; }
   #portfolio .lg-heading {
@@ -234,8 +239,19 @@ main {
         opacity: 0.5;
         border-color: #56AFE2; }
 
+#sent {
+  background: #444444;
+  padding: 4rem;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center; }
+  #sent .lg-heading {
+    padding-bottom: 20px; }
+  #sent .sm-heading {
+    padding-bottom: 35px; }
+
 .btn, .btn-dark, .btn-light {
-  font-family: 'Lato', sans-serif;
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
@@ -243,6 +259,9 @@ main {
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #EB9D0E;
     color: #242121; }
+  .btn .btn-txt, .btn-dark .btn-txt, .btn-light .btn-txt {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900; }
 
 .btn-dark {
   background: black;
@@ -254,8 +273,7 @@ main {
 
 #contact {
   background: #444444;
-  padding: 0;
-  padding: 4rem;
+  padding: 4rem 20rem;
   overflow: hidden; }
   #contact h6 {
     font-size: 1.5rem;
@@ -269,44 +287,74 @@ main {
     border: none;
     border-bottom: 2px solid #FFFFFF;
     color: #FFFFFF; }
-  #contact .buttonSubmit {
-    background-color: transparent;
-    padding: 0.9rem 2rem;
-    font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
+  #contact .toTop {
+    font-size: 2.2rem;
     text-align: center;
-    margin: auto;
-    margin: 30px auto;
-    text-decoration: none;
-    display: block;
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
-    cursor: pointer;
-    transition: background-color 1.2s, color 0.3s linear;
-    overflow: hidden;
-    transform: translateX(-40%) translateY(-60%);
-    border-radius: 5px; }
-    #contact .buttonSubmit:hover {
-      background-color: #56AFE2;
-      border: 2px double #FFFFFF; }
+    animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite; }
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-20px); }
+  60% {
+    transform: translateY(-10px); } }
+
+#sent {
+  background: #444444;
+  padding: 4rem;
+  overflow: hidden; }
+  #sent .emailsent {
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+
+.buttonSubmit {
+  background-color: transparent;
+  padding: 0.9rem 2rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 40px 0 0 49%;
+  text-decoration: none;
+  display: block;
+  float: center;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 1.2s, color 0.3s linear;
+  overflow: hidden;
+  transform: translateX(-40%) translateY(-60%);
+  border-radius: 5px; }
+  .buttonSubmit:hover {
+    background-color: #56AFE2;
+    border: 2px double #FFFFFF; }
 
 @media screen and (min-width: 1170px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1169px) {
+  main {
+    align-items: center;
+    text-align: center;
+    justify-content: center; }
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  #contact {
+    padding: 4rem 10rem; } }
 
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
     text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem;
-      font-size: 3rem; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -324,17 +372,23 @@ main {
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
       background: url("../img/TCDev.gif") no-repeat;
-      background-size: 187%;
+      background-size: 100%;
       background-position: center center;
       width: 150px;
       height: 150px; }
-  .about-info {
+  #about .about-info {
     grid-template-areas: 'aboutimg' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+  #about .projects {
+    grid-template-columns: repeat(2, 1fr); }
+  #contact {
+    padding: 4rem; }
+  #sent .lg-heading {
+    font-size: 4rem; }
+  #sent .sm-heading {
+    font-size: 1.7rem; } }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 545px) {
   h1,
   h2,
   h3 {
@@ -354,4 +408,8 @@ main {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  #sent .lg-heading {
+    font-size: 2.7rem; }
+  #sent .sm-heading {
+    font-size: 1.7rem; } }

@@ -4,6 +4,10 @@
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    #contact {
+        height: 100vh;
+    }
 }
 
 // DESKTOPS & LAPTOPS
@@ -14,16 +18,28 @@
         align-items: center;
         text-align: center;
         justify-content: center;
+        height: auto;
     }
 
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    #portfolio {
+        height: auto;
+    }
+
     #contact {
         padding: 4rem 10rem;
+        height: 100vh;
+
+        .contact-info {
+            padding: 0 10%;
+        }
     }
 }
+
+
 
 // TABLETS
 
@@ -80,8 +96,25 @@
         }
     }
 
+    #portfolio {
+        height: auto;
+
+        .works {
+            font-size: 3rem;
+            padding: 20% 0;
+        }
+    }
+
     #contact {
         padding: 4rem;
+        height: auto;
+
+        .contact-info {
+            grid-template-areas:
+                'phone'
+                'email';
+            grid-template-columns: 1fr;
+        }
     }
 
     #sent {

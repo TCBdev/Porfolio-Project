@@ -152,3 +152,51 @@ $(document).ready(function () {
         })
     })
 })
+
+/*
+  -----------------------------
+    S C R O L L   R E V E A L 
+  -----------------------------
+*/
+
+window.sr = ScrollReveal();
+sr.reveal('.job1', {
+    duration: 2000,
+    delay: 300,
+    reset: true,
+    useDelay: 'always',
+    origin: 'bottom',
+    distance: '30px'
+})
+sr.reveal('.job2', {
+    duration: 2000,
+    delay: 600,
+    reset: true,
+    useDelay: 'always',
+    origin: 'bottom',
+    distance: '30px'
+})
+sr.reveal('.job3', {
+    duration: 2000,
+    delay: 900,
+    reset: true,
+    useDelay: 'always',
+    origin: 'bottom',
+    distance: '30px'
+})
+sr.reveal('.phone', {
+    duration: 2000,
+    delay: 300,
+    reset: true,
+    useDelay: 'always',
+    origin: 'bottom',
+    distance: '30px'
+})
+sr.reveal('.email', {
+    duration: 2000,
+    delay: 700,
+    reset: true,
+    useDelay: 'always',
+    origin: 'bottom',
+    distance: '30px'
+})

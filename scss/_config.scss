@@ -12,23 +12,24 @@ $background-opacity: 0.9;
 @mixin background {
     @if $show-hero-image {
         &#bg-img {
+
             background: $hero-image;
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
-            height: 100vh;
+            background-size: 100rem;
 
             &:after {
                 content: '';
-                position: absolute;
+                position: fixed;
                 top: 0;
                 right: 0;
-                width: 100%;
-                height: 100%;
+                width: 120%;
+                height: 120%;
                 z-index: -1;
                 background-color: rgba($primary-color, $background-opacity);
-                height: 117vh;
             }
         }
+
     }
 }
 

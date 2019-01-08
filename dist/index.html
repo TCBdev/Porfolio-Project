@@ -10,9 +10,20 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!--  CSS STYLING  -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="img/favicon.png" rel="shortcut icon" type="image/png">
+
+    <!--  SCROLL REVEAL  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>TC Brown | Designer / Developer</title>
 </head>
 
@@ -63,16 +74,20 @@
             I am a <strong><span class="txt-type" data-wait="3000" data-words='["Developer.", "Designer.", "Creator."]'></span></strong>
         </h2>
         <div class="icons">
-            <a href="https://github.com/TCdev" target="_blank">
+            <a href="https://github.com/TCBdev" target="_blank">
                 <i class="fab fa-github fa-2x"></i>
             </a>
-            <a href="https://www.linkedin.com/in/tcdev/" target="_blank">
+            <a href="https://www.linkedin.com/in/tcbdev/" target="_blank">
                 <i class="fab fa-linkedin fa-2x"></i>
             </a>
-            <a href="https://codepen.io/tcdev/" target="_blank">
+            <a href="https://codepen.io/tcbdev/" target="_blank">
                 <i class="fab fa-codepen fa-2x"></i>
             </a>
+            <a href="https://twitter.com/tcbdev/" target="_blank">
+                <i class="fab fa-twitter fa-2x"></i>
+            </a>
         </div>
+        <div class="photo"><a href="http://www.pixabay.com">Source: pixabay.com</a></div>
     </main>
 
     <section id="about">
@@ -83,15 +98,11 @@
             <img src="img/tcb.png" alt="Thomas Brown" class="about-img">
             <div class="bio">
                 <h3 class="text-secondary">BIO</h3>
-                <p>I am a front-end web developer who focuses on writing clean, elegant, efficient code. I have a
-                    passion for designing functional and lovely experiences that will keep your customers coming back
-                    for more! I am
-                    proficient in HTML5, CSS3, Sass, JavaScript with object oriented programming, ES6, jQuery, build
-                    tools
-                    and task runners -
-                    Node.js, Gulp for automation and optimization. Writing test suites for projects using Jasmine
-                    testing framework. Code
-                    Linting for syntax and styling errors using ESLint.</p>
+                <p>I am a front-end web developer who focuses on writing clean, efficient code. I have a
+                    passion for designing functional and elegant experiences that will keep your customers coming back
+                    for more! I am proficient in HTML5, CSS3, Sass, JavaScript (ES6) with object oriented programming,
+                    &
+                    jQuery.</p>
             </div>
 
             <div class="job job1">
@@ -139,10 +150,10 @@
                 </h6>
             </div>
             <div>
-                <h4>
+                <h3>
                     <a href="https://drive.google.com/file/d/1-owrQhQQ1fqL7PFvz88wSQamaHnA0NIC/view?usp=sharing" target="_blank"
                         class="text-third">Veiw Full Resume Here</a>
-                </h4>
+                </h3>
             </div>
         </div>
     </section>
@@ -153,52 +164,78 @@
         </h1>
         <div class="projects">
             <div class="item">
-                <a href="https://tcdev.github.io/classicarcadegame/" target="_blank">
-                    <img src="img/classgame.gif" alt="Frogger type game">
+                <a href="https://tcbdev.github.io/classicarcadegame/" target="_blank">
+                    <img data-src="img/classgame.gif" class="lazyload" alt="Frogger type game">
                 </a>
-                <a href="https://tcdev.github.io/classicarcadegame/" target="_blank" class="btn-light">
+                <a href="https://tcbdev.github.io/classicarcadegame/" target="_blank" class="btn-light">
                     <i class="fas fa-eye"><span class="btn-txt"> Project</span></i>
                 </a>
-                <a href="https://github.com/TCdev/classicarcadegame" target="_blank" class="btn-dark">
+                <a href="https://github.com/TCbdev/classicarcadegame" target="_blank" class="btn-dark">
                     <i class="fab fa-github"><span class="btn-txt"> View My Code</span></i>
                 </a>
             </div>
 
             <div class="item">
-                <a href="https://tcdev.github.io/MemoryGame/" target="_blank">
-                    <img src="img/memgame.gif" alt="Memory Game">
+                <a href="https://tcbdev.github.io/MemoryGame/" target="_blank">
+                    <img data-src="img/memgame.gif" class="lazyload" alt="Memory Game">
                 </a>
-                <a href="https://tcdev.github.io/MemoryGame/" target="_blank" class="btn-light">
+                <a href="https://tcbdev.github.io/MemoryGame/" target="_blank" class="btn-light">
                     <i class="fas fa-eye"><span class="btn-txt"> Project</span></i>
                 </a>
-                <a href="https://github.com/TCdev/MemoryGame" target="_blank" class="btn-dark">
+                <a href="https://github.com/TCbdev/MemoryGame" target="_blank" class="btn-dark">
                     <i class="fab fa-github"><span class="btn-txt"> View My Code</span></i>
                 </a>
             </div>
 
             <div class="item">
-                <a href="https://tcdev.github.io/canvasexperiment/" target="_blank">
-                    <img src="img/canvasdots.gif" alt="Canvas Experiment">
+                <a href="https://codepen.io/tcbdev/pen/MPdKom" target="_blank">
+                    <img data-src="img/canvasdots.gif" class="lazyload" alt="Canvas Experiment">
                 </a>
-                <a href="https://tcdev.github.io/canvasexperiment/" target="_blank" class="btn-light">
+                <a href="https://codepen.io/tcbdev/pen/MPdKom/" target="_blank" class="btn-light">
                     <i class="fas fa-eye"><span class="btn-txt"> Project</span></i>
                 </a>
-                <a href="https://github.com/TCdev/canvasexperiment" target="_blank" class="btn-dark">
+                <a href="https://github.com/TCbdev/canvasexperiment" target="_blank" class="btn-dark">
                     <i class="fab fa-github"><span class="btn-txt"> View My Code</span></i>
                 </a>
             </div>
 
             <div class="item">
-                <a href="https://tcdev.github.io/restaurantreview/" target="_blank">
-                    <img src="img/RRApp.JPG" target="_blank" alt="Restaurant Review App">
+                <a href="https://tcbdev.github.io/restaurantreview/" target="_blank">
+                    <img data-src="img/RRApp.JPG" class="lazyload" target="_blank" alt="Restaurant Review App">
                 </a>
-                <a href="https://tcdev.github.io/restaurantreview/" target="_blank" class="btn-light">
+                <a href="https://tcbdev.github.io/restaurantreview/" target="_blank" class="btn-light">
                     <i class="fas fa-eye"><span class="btn-txt"> Project</span></i>
                 </a>
-                <a href="https://github.com/TCdev/restaurantreview" target="_blank" class="btn-dark">
+                <a href="https://github.com/TCbdev/restaurantreview" target="_blank" class="btn-dark">
                     <i class="fab fa-github"><span class="btn-txt"> View My Code</span></i>
                 </a>
             </div>
+        </div>
+        <div class="projects">
+            <h1 class="works">In the <span class="text-third"><strong>Works!</strong></span></h1>
+            <div class="item">
+                <a href="https://tcbdev.github.io/moviedatabase/" target="_blank">
+                    <img data-src="img/MovieDB.JPG" class="lazyload" target="_blank" alt="Restaurant Review App">
+                </a>
+                <a href="https://tcbdev.github.io/moviedatabase/" target="_blank" class="btn-light">
+                    <i class="fas fa-eye"><span class="btn-txt"> Project</span></i>
+                </a>
+                <a href="https://github.com/TCBdev/moviedatabase" target="_blank" class="btn-dark">
+                    <i class="fab fa-github"><span class="btn-txt"> View My Code</span></i>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://tcbdev.github.io/desserts/" target="_blank">
+                    <img data-src="img/dessert.gif" class="lazyload" target="_blank" alt="Restaurant Review App">
+                </a>
+                <a href="https://tcbdev.github.io/desserts/" target="_blank" class="btn-light">
+                    <i class="fas fa-eye"><span class="btn-txt"> Project</span></i>
+                </a>
+                <a href="https://github.com/TCBdev/desserts" target="_blank" class="btn-dark">
+                    <i class="fab fa-github"><span class="btn-txt"> View My Code</span></i>
+                </a>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
@@ -209,8 +246,20 @@
             <h6>
                 Want to work together? Contact Me!
             </h6>
-            <form id="myform" class="wrapper" action="../config/contact.php" method="POST">
-                <!--CHANGE ACTION TO /CONTACT.HTML BEFORE PUBLISHING-->
+            <div class="contact-info">
+                <div class="message phone">
+                    <span class="text-third"><i class="fas fa-mobile fa-2x"></i></span>
+                    <p>509.714.8218</p>
+                </div>
+                <a href="mailto:tc@tcbdev.com">
+                    <div class="message email">
+                        <span class="text-third"><i class="far fa-envelope fa-2x"></i></span>
+                        <p>tc@tcbdev.com</p>
+                    </div>
+                </a>
+            </div>
+            <!--<form id="myform" class="wrapper" action="contact.html" method="POST">
+                // CHANGE ACTION TO /CONTACT.HTML BEFORE PUBLISHING //
                 <div class="contactme">
                     <div class="form-group">
                         <label for="firstName" class="label">First Name</label>
@@ -234,13 +283,64 @@
                     </div>
                     <button type="submit" id="contactSubmit" value="Submit" class="buttonSubmit btn-default">SUBMIT</button>
                 </div>
-            </form>
+            </form>-->
         </div>
         <div class="toTop" style="text-align: center;">
             <a href="#home" class="scroll text-third"><i class="fas fa-chevron-circle-up"></i></a>
         </div>
     </section>
+
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/lazysizes@4.1.5/lazysizes.js"></script>
+    <script>
+        /*
+        -----------------------------
+        S C R O L L R E V E A L
+        -----------------------------
+        */
+
+        window.sr = ScrollReveal();
+        sr.reveal('.job1', {
+            duration: 2000,
+            delay: 300,
+            reset: true,
+            useDelay: 'always',
+            origin: 'bottom',
+            distance: '30px'
+        })
+        sr.reveal('.job2', {
+            duration: 2000,
+            delay: 600,
+            reset: true,
+            useDelay: 'always',
+            origin: 'bottom',
+            distance: '30px'
+        })
+        sr.reveal('.job3', {
+            duration: 2000,
+            delay: 900,
+            reset: true,
+            useDelay: 'always',
+            origin: 'bottom',
+            distance: '30px'
+        })
+        sr.reveal('.phone', {
+            duration: 2000,
+            delay: 300,
+            reset: true,
+            useDelay: 'always',
+            origin: 'bottom',
+            distance: '30px'
+        })
+        sr.reveal('.email', {
+            duration: 2000,
+            delay: 700,
+            reset: true,
+            useDelay: 'always',
+            origin: 'bottom',
+            distance: '30px'
+        })
+    </script>
 </body>
 
 </html>
